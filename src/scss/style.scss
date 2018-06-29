@@ -37,3 +37,11 @@ body {
 	line-height: 1;
 	margin: 0;
 }
+
+.form {
+	display: grid;
+	grid-template-columns: 5fr 1fr;
+	grid-template-rows: repeat(3, auto);
+	margin-top: 8rem;
+	width: 80%;
+}
