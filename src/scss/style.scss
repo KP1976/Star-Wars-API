@@ -1,5 +1,6 @@
 :root {
 	--font-headers: 'Anton', sans-serif;
+	--font-color: #f5f5f5;
 }
 
 *,
@@ -13,12 +14,16 @@ html {
 }
 
 body {
+	color: var(--font-color);
 	margin: 0;
 	padding: 0;
 }
 
 .container {
+	align-items: center;
 	background-color: #2b2f33;
-	font-family: 'Anton', sans-serif;
+	display: flex;
+	flex-direction: column;
+	// font-family: var(--font-headers);
 	height: 100vh;
 }
