@@ -7,9 +7,18 @@ const formInput = document.querySelector('.form__input');
 const formSelect = document.querySelector('.form__select');
 const searchList = document.querySelector('.search-list');
 
-console.log(searchForm, formInput, formSelect, searchList);
+// Base URL
+const baseURL = 'https://swapi.co/api/';
+
+// Searching category
+let category = 'people';
+
+// Event Listener for change option
+formSelect.addEventListener('change', function() {
+	console.log('You have changed select!');
+});
 
 // axios
-// 	.get('https://swapi.co/api/')
+// 	.get('baseURL')
 // 	.then(response => console.log(response))
 // 	.catch(error => console.log(error));
