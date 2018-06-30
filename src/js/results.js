@@ -9,16 +9,22 @@ export const result = (option, data) => {
 
 	switch (option) {
 		case 'people':
-			html = data.map(result =>
-				item(`Name: <strong>${result.name}</strong>, 
-      Height: <strong>${result.height}</strong>, Hair Color: <strong>${result.hair_color}`),
+			html = data.map((result, index) =>
+				item(
+					`${index + 1}. Name: <span class="text--bold">${result.name}</span>, Height: <span class="text--bold">${
+						result.height
+					}</span>, Hair Color: <span class="text--bold">${result.hair_color}</span>`,
+				),
 			);
 			break;
 		case 'planets':
+			html = data.map((result, index) =>
+				item(`${index + 1}. Name: <span class="text--bold">${result.name}</span>, Climate: <span class="text--bold">${result.climate}</span>`),
+			);
 			break;
 		default:
 			return;
 	}
 
-	searchList.innerHTML = html;
+	searchList.innerHTML = html.join('');
 };
