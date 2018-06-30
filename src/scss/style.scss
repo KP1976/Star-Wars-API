@@ -57,8 +57,17 @@ body {
 .form__label {
 	font-family: Arial;
 	font-size: 2rem;
-	grid-column: 1 / -1;
 	text-transform: uppercase;
+}
+
+.form__label--search {
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
+}
+
+.form__label--category {
+	grid-column: 2 / 3;
+	grid-row: 1 / 2;
 }
 
 .form__input {
