@@ -27,9 +27,11 @@ searchForm.addEventListener('submit', function(event) {
 
 	// Final url
 	const url = `${baseURL}${category}/?search=${value}`;
-});
 
-// axios
-// 	.get('baseURL')
-// 	.then(response => console.log(response))
-// 	.catch(error => console.log(error));
+	// Get data from Star Wars API
+	axios
+		.get(url)
+		.then(response => response.data)
+		.then(data => console.log(data))
+		.catch(error => console.log(error));
+});
