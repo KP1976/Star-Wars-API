@@ -6,6 +6,7 @@ import './scss/style.scss';
 const searchForm = document.querySelector('.form');
 const formInput = document.querySelector('.form__input');
 const formSelect = document.querySelector('.form__select');
+export const searchList = document.querySelector('.search-list');
 
 // Base URL
 const baseURL = 'https://swapi.co/api/';
@@ -32,9 +33,6 @@ searchForm.addEventListener('submit', function(event) {
 	axios
 		.get(url)
 		.then(response => response.data)
-		.then(data => {
-			result(category, data.results);
-			console.log(data.results);
-		})
+		.then(data => result(category, data.results))
 		.catch(error => console.log(error));
 });
