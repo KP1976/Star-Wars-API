@@ -15,7 +15,18 @@ let category = 'people';
 
 // Event Listener for change option
 formSelect.addEventListener('change', function() {
-	console.log('You have changed select!');
+	category = this.value;
+});
+
+// Event Listener for submit form (get results from api)
+searchForm.addEventListener('submit', function(event) {
+	event.preventDefault();
+
+	// This is what we want to search for
+	const value = formInput.value;
+
+	// Final url
+	const url = `${baseURL}${category}/?search=${value}`;
 });
 
 // axios
