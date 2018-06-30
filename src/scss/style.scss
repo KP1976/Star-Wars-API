@@ -2,6 +2,8 @@
 	--font-headers: 'Anton', sans-serif;
 	--font-color: #f5f5f5;
 	--font-title-color: #ffe348;
+
+	--radius: 0.3rem;
 }
 
 *,
@@ -42,7 +44,7 @@ body {
 
 .form {
 	border: 1rem solid var(--font-title-color);
-	border-radius: 0.3rem;
+	border-radius: var(--radius);
 	display: grid;
 	grid-template-columns: 5fr 1fr;
 	grid-template-rows: repeat(3, auto);
@@ -57,4 +59,15 @@ body {
 	font-size: 2rem;
 	grid-column: 1 / -1;
 	text-transform: uppercase;
+}
+
+.form__input {
+	border: none;
+	border-radius: var(--radius);
+	font-family: var(--font-headers);
+	letter-spacing: 0.1rem;
+	line-height: 0.5rem;
+	outline-color: var(--font-color);
+	padding: 1rem;
+	font-size: 2rem;
 }
